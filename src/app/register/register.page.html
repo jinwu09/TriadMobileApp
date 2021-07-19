@@ -1,0 +1,75 @@
+<ion-content color="light">
+  <form [formGroup]="registerForm" ngNativeValidate (submit)="onSubmit($event)">
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title class="ion-text-center">
+          <h1>Register</h1>
+        </ion-card-title>
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input
+            type="email"
+            placeholder="Enter Input"
+            formControlName="account_email"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input
+            type="password"
+            placeholder="Enter Input"
+            formControlName="account_password"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input
+            type="text"
+            placeholder="Enter Input"
+            formControlName="account_fname"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input
+            type="text"
+            placeholder="Enter Input"
+            formControlName="account_lname"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Address</ion-label>
+          <ion-input
+            type="text"
+            placeholder="Enter Input"
+            formControlName="account_address"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-button
+          type="submit"
+          class="ion-margin-top"
+          shape="round"
+          expand="full"
+          >Submit</ion-button
+        >
+        <ion-button
+          color="success"
+          [routerLink]="['/home']"
+          class="ion-margin-top"
+          shape="round"
+          expand="full"
+          >Login</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
